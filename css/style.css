@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Nunito:wght@200;300;400;600&family=Poppins:wght@200;300;400;500;600&display=swap');
+:root{
+    --color:#9A9CEA;
+}
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+*::selection{
+    background: var(--color);
+    color: #333;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+html::-webkit-scrollbar{
+    width: 1.4rem;
+}
+html::-webkit-scrollbar-track{
+    background: #333;
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--color);
+}
+body{
+    background: #1a1a1a;
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+section{
+    min-height: 100vh;
+    padding: 1rem;
+}
+.btn{
+    padding: .7rem 3rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+.btn i{
+    padding: 0 .5rem;
+    font-size: 1.8rem;
+}
+.btn:hover{
+    background: var(--color);
+    transform: scale(1.1);
+}
+.heading{
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: .1rem solid #fff4;
+    color: #fff;
+}
+.heading span{
+    color: var(--color);
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+header .user img{
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: .7rem solid var(--color);
+}
+header .user .name{
+    font-size: 3.5rem;
+    color: #fff;
+}
+header .user .post{
+    font-size: 2rem;
+    color: #eee;
+}
+header .navbar{
+    width: 100%;
+}
+header .navbar ul{
+    list-style: none;
+    padding: 1rem 3rem;
+}
+header .navbar ul li a{
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background: rgb(24, 24, 24);
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+header .navbar ul li a:hover{
+    background-color: var(--color);
+    transform: scale(1.1);
+}
+#menu{
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+/* home section start*/
+.home{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 7.1rem;
+}
+.home h3{
+    font-size: 2.5rem;
+    color: #fff;
+}
+.home h1{
+    font-size: 5rem;
+    color: #fff;
+}
+.home h1 span{
+    color: var(--color);
+}
+.home p{
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 0;
+    text-align: justify;
+}
+/* home section end*/
+/* about section start*/
+.about .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+.about .row .info{
+    flex: 1 1 48rem;
+    padding: 2rem 1rem;
+    padding-left: 6rem;
+}
+.about .row .info h3{
+    font-size: 2rem;
+    color: var(--color);
+    padding: 1rem 0;
+    font-weight: normal;
+}
+.about .row .info h3 span{
+    color: #fff;
+    padding: 0 .5rem;
+
+}
+.about .row .skills{
+    flex: 1 1 48rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;    
+}
+.about .row .skills .skills-itam{
+    width: 35rem;
+    padding: 2rem;
+    margin: 2rem;
+}
+.about .row .skills .skills-itam li{
+    list-style: none;
+    padding: 3rem 0;
+    position: relative;
+    
+    color: #fff;
+}
+.about .row .skills .skills-itam li::before{
+    content: '';
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    width: 100%;
+    height: 1rem;
+    background-color: #9A9CEA;
+    border-radius: 5rem;
+}
+.about .row .skills .skills-itam li::after{
+    content: '';
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    width: 0;
+    height: 1rem;
+    background-color: #545afd;
+    border-radius: 5rem;
+
+    animation-duration: 3s;
+    animation-delay: .5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+.about .row .skills .skills-itam li.html::after{
+    animation-name: html;
+}
+@keyframes html{
+    to{
+        width: 95%;
+    }
+}
+.about .row .skills .skills-itam li.css::after{
+    animation-name: css;
+}
+@keyframes css{
+    to{
+        width: 90%;
+    }
+}
+.about .row .skills .skills-itam li.bootstrap::after{
+    animation-name: bootstrap;
+}
+@keyframes bootstrap{
+    to{
+        width: 80%;
+    }
+}
+.about .row .skills .skills-itam li.js::after{
+    animation-name: js;
+}
+@keyframes js{
+    to{
+        width: 70%;
+    }
+}
+/* about section end*/
+/* eduaction section start*/
+.education .edu-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    padding-left: 3rem;
+}
+.education .edu-container .box{
+    width: 27rem;
+    margin: 4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid #fff;
+    position: relative;
+}
+.education .edu-container .box h2{
+    font-size: 1.3rem;
+    padding: 0 2rem;
+    color: #fff;
+  
+}
+.education .edu-container .box h3{
+    font-size: 1.8rem;
+    color: #fff;
+    padding-top: 1.5rem;
+}
+.education .edu-container .box p{
+    font-size: 1.3rem;
+    color: #fff;
+    padding-top: 2rem 0;
+}
+.education .edu-container .box i{
+    position: absolute;
+    top: -1.5rem;
+    left: -2.5rem;
+    height: 5rem;
+    width: 5rem;
+    font-size: 2rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    color: #fff;
+    background: var(--color);
+}
+.education .edu-container .box i:hover{
+    transform: scale(1.3);
+}
+/* eduaction section end*/
+/* gallary section start*/
+.gallary .gallary-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+.gallary .gallary-container .gallary-photo{
+    height: 20rem;
+    width: 30rem;
+    border: .2rem solid var(--color);
+    border-radius: 1rem;
+    margin: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+.gallary .gallary-container .gallary-photo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* gallary section end*/
+/* service section start*/
+.service{
+    min-height: 100%;
+}
+.service .service-container{
+    padding: 2rem 0;
+    padding-left: 3rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.service .service-container .service-itam{
+    margin: 1rem;
+    padding: 1rem;
+    width: 31rem;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1rem rgba(145, 142, 142, 0.2);
+    background: #eee;
+    text-align: center;
+}
+.service .service-container .service-itam i{
+    height: 5rem;
+    width: 5rem;
+    font-size: 3rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    color: #333;
+    background: var(--color);  
+}
+.service .service-container .service-itam i:hover{
+    transform: scale(1.2);
+}
+.service .service-container .service-itam p{
+    font-size: 1.3rem;
+    padding: 2rem 2rem;
+    text-align: justify;
+    color: #1a1a1a;
+}
+/* service section end*/
+/* contace section start*/
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact .row .content{
+    flex: 1 1 30rem;
+    padding: 4rem;
+    padding-bottom: 0;
+}
+.contact .row form{
+    flex: 1 1 45rem;
+    padding: 2rem;
+    margin: 2rem;
+    padding-bottom:4rem;
+}
+.contact .row form .box{
+    padding: 1.5rem;
+    margin: 2rem 0;
+    background: #333;
+    color: #fff;
+    text-transform: none;
+    font-size: 1.7rem;
+    width: 100%;
+}
+.contact .row form .box::placeholder{
+    text-transform: capitalize;
+}
+.contact .row form .message{
+    height: 15rem;
+    resize: none;
+}
+.contact .row .content .title{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+.contact .row .content .info h3{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #fff;
+    padding: 1rem 0;
+    font-weight: normal;
+    text-transform: none;
+}
+.contact .row .content .info h3 i{
+    padding-right: 1rem;
+    color: var(--color);
+}
+
+/* contact section end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive & media queries */
+@media (max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+    .home{
+        padding: 1rem 4rem;
+    }
+}
+@media (max-width:991px){
+    header{
+        left: -120%;
+    }
+    #menu{
+        display: block;
+    }
+    header.toggle{
+        left: 0%;
+    }
+    body{
+        padding: 0;
+    }
+    .about .row .skills .skills-itam{
+        margin-right: 10rem;
+    }
+    .service .service-container .service-itam{
+        width: 46%;
+    }
+}
+@media (max-width:767px){
+    header{
+        width: 100vw;
+    }
+    .heading{
+        margin: 0 3rem;
+    }
+    .about .row .skills .skills-itam{
+        margin-right: 10rem;
+    }
+    .education .edu-container .box{
+        width: 100%;
+    }
+    .gallary .gallary-container .gallary-photo{
+        width: 100%;
+    }
+    .service .service-container .service-itam{
+        width: 100%;
+    }
+    .contact .row form{
+        margin: 3rem 0;
+    }
+}
+@media (max-width:400px){
+    header{
+        width: 100vw;
+    }
+    .heading{
+        margin: 0 3rem;
+    }
+    .about .row .skills .skills-itam li{
+        width: 100%;
+    }
+    .education .edu-container .box{
+        width: 100%;
+    }
+    .gallary .gallary-container .gallary-photo{
+        width: 100%;
+    }
+    .service .service-container .service-itam{
+        width: 100%;
+    }
+    .contact .row form{
+        margin: 3rem 0;
+    }
+}
